@@ -13,3 +13,4 @@ else:
 
 # create the sub-folders
 os.makedirs("data/brand", exist_ok=True)
+os.makedirs("data/license", exist_ok=True)
