@@ -1,7 +1,7 @@
 import requests
 
 
-def import_cars_by_brand(brand: str) -> None:
+def import_cars_by_brand(brand: str) -> list:
     '''
     Imports data from the car API
     
