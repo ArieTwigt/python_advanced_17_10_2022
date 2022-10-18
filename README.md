@@ -25,8 +25,9 @@ Assignments:
   
   7. Export the csv-file as the lowercase of the license plate
 
+---
 
-Assignments 2:
+## Assignments 2:
 
   1. Import both functions in the main script
 
