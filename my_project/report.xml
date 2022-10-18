@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.017" timestamp="2022-10-18T15:07:40.457025" hostname="air-van-arie.lan"><testcase classname="my_tests" name="test_calc_interest_print" time="0.001"><failure message="assert 110.25 == 127.63&#10; +  where 110.25 = calc_interest_print(100, 5, 2)">def test_calc_interest_print():
+        assert calc_interest_print(100, 5, 1) == 105
+&gt;       assert calc_interest_print(100, 5, 2) == 127.63
+E       assert 110.25 == 127.63
+E        +  where 110.25 = calc_interest_print(100, 5, 2)
+
+my_tests.py:8: AssertionError</failure></testcase></testsuite></testsuites>
