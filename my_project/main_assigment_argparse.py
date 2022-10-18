@@ -1,5 +1,8 @@
 import re
 from custom_modules.api_functions import import_cars_by_brand, import_cars_by_plate
+from custom_modules.conversion_functions import convert_list_to_df
+from custom_modules.export_functions import export_df_to_csv, export_df_license_to_csv, export_df_to_sql
+
 
 import argparse
 
@@ -25,6 +28,11 @@ parser.add_argument('--color',
                     type=str,
                     required=False)
                     
+parser.add_argument('--export',
+                    type=str,
+                    required=False,
+                    choices=['print', 'db', 'csv'],
+                    default='print')
 
 
 # parse the arguments
@@ -49,12 +57,24 @@ if __name__ == '__main__':
 
         if selected_color == None:
             cars_list = import_cars_by_brand(selected_brand)
+            cars_df = convert_list_to_df(cars_list)
         else:
             print("By Color")
             cars_list = import_cars_by_brand(selected_brand, selected_color)
+            cars_df = convert_list_to_df(cars_list)
     else:
         selected_plate = args.plate
         cars_list = import_cars_by_plate(selected_plate)
 
+    # get the export_type
+    export_type = args.export
 
-    print(cars_list)
+    if export_type == 'csv':
+        if import_by == 'brand':
+            export_df_to_csv(cars_df, selected_brand)
+        elif import_by == 'plate':
+            export_df_license_to_csv(cars_df, selected_plate)
+    elif export_type == 'db':
+        export_df_to_sql(cars_df)
+    else:
+        print(cars_df)
