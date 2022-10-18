@@ -45,3 +45,14 @@ Assignments:
       1. Export the data into a database
       2. Export the data into a csv-file (with the right folder structure) 
       3. Only display it in the terminal
+
+
+##Assignments 3
+
+1. Extend the Car class that enables us to specify the colour of a new defined instance of Car
+
+2. Create an attribute price which is default to 0
+
+3. Add a method for the Car class in which we can specify the price of the car
+
+4. Add a method for the Car class with which we can increase or decrease the price of the car
