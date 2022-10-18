@@ -14,6 +14,10 @@ def convert_list_to_df(obj_list: list) -> pd.DataFrame:
     # converting a column in a data frame
 
     # price
+    if 'catalogusprijs' not in cars_df.columns:
+        cars_df['catalogusprijs' ] = np.nan
+
+    # convert it to a float
     cars_df['catalogusprijs'] = cars_df['catalogusprijs'].astype(float)
 
     # cilinders
