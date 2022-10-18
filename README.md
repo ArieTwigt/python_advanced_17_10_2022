@@ -47,7 +47,7 @@ Assignments:
       3. Only display it in the terminal
 
 
-##Assignments 3
+## Assignments 3
 
 1. Extend the Car class that enables us to specify the colour of a new defined instance of Car
 
