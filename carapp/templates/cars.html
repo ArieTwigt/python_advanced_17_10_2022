@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1> Cars</h1>
+
+<form action="/cars" method="POST">
+    <div class="form-group">
+        <div class="input-group">
+            <input name="brand">
+        </div>
+        <button class="btn btn-primary" type="submit">SEARCH</button>
+    </div>
+
+</form>
+
+
+<table class="table">
+    <thead>
+        <th>Brand:</th>
+        <th>Model:</th>
+        <th>Price:</th>
+    </thead>
+    <tbody>
+        {% for car in cars_list %}
+        <tr>
+           <td>{{ car['merk'] }} </td>
+           <td>{{ car['handelsbenaming'] }} </td>
+           <td>{{ car['catalogusprijs'] }} </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+
+{% endblock %}
