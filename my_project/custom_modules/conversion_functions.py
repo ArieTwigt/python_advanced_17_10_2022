@@ -33,7 +33,7 @@ def convert_list_to_df(obj_list: list) -> pd.DataFrame:
 
     # specify subset of columns
     columns_list = ['kenteken', 'merk', 'handelsbenaming', 'eerste_kleur', 
-                    'catalogusprijs']
+                    'catalogusprijs', 'eerste_kleur']
 
     # add 'aantal_cilinders' if it is available in the data frame\
     if 'aantal_cilinders' in cars_df.columns:

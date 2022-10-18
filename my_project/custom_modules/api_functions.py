@@ -2,7 +2,7 @@ from multiprocessing.sharedctypes import Value
 import requests
 
 
-def import_cars_by_brand(brand: str) -> list:
+def import_cars_by_brand(brand: str, color: str=None) -> list:
     '''
     Imports data from the car API
     
@@ -12,7 +12,11 @@ def import_cars_by_brand(brand: str) -> list:
 
 
     # define the endpoint for the API
-    endpoint = f"https://opendata.rdw.nl/resource/m9d7-ebf2.json?merk={brand_upper}"
+    if color == None:
+        endpoint = f"https://opendata.rdw.nl/resource/m9d7-ebf2.json?merk={brand_upper}"
+    else:
+        color_upper = color.upper()
+        endpoint = f"https://opendata.rdw.nl/resource/m9d7-ebf2.json?merk={brand_upper}?eerste_kleur={color_upper}"
     
     # execute the GET request for the endpoint
     response = requests.get(endpoint)
