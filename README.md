@@ -24,3 +24,23 @@ Assignments:
   6. Create a seperate folder for each brand
   
   7. Export the csv-file as the lowercase of the license plate
+
+
+Assignments 2:
+
+  1. Import both functions in the main script
+
+  2. Addanargument that specifies the choice: 
+       1. Import a car by Brand
+       2. Import a car by License plate
+
+  3. Add an extra argument with which you can specify the color 
+       1. Add an extra argument for argparse
+       2. Add an extra argument to your function
+       3. You might need a conditional statement to handle the situation
+  
+  4. Add an extra argument that specifies if youwant to:
+
+      1. Export the data into a database
+      2. Export the data into a csv-file (with the right folder structure) 
+      3. Only display it in the terminal
